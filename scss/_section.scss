@@ -101,12 +101,13 @@ section{
 // MEDIA QUERIES
 
 section{
-    @media (max-width: 650px) {
-        height: 130vh;
+    @media (max-width: 800px) {
+        height: 100%;
         flex-direction: column;
         justify-content: space-around;       
     }
 
+   
     & .price__year{
         @media (max-width:1270px) {
             height: 100px;
@@ -130,15 +131,9 @@ section{
             height: 60px;
             font-size: 1.5rem;        
             animation: none 0 !important;
-        }
-
-        @media (max-width: 800px) {
-            height: 50px;
-            font-size: 1rem;        
-            animation: none 0 !important;
-        }
+        }       
         
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             height: 80px; 
             font-size: 2.5rem;
             animation: resize .5s linear !important;
@@ -167,15 +162,9 @@ section{
             height: 60px;
             font-size: 1.5rem;        
             animation: none 0 !important;
-        }
+        }       
 
         @media (max-width: 800px) {
-            height: 50px;
-            font-size: 1rem;        
-            animation: none 0 !important;
-        }
-
-        @media (max-width: 650px) {
             height: 80px;
             font-size: 2.5rem;
             animation: resize .5s linear !important;     
@@ -193,17 +182,17 @@ section{
 
         @media (max-width:950px){
             width: 250px
-        }
-
-        @media (max-width:800px){
-            width: 200px
-        }
+        }       
         
-        @media (max-width: 650px) {            
+        @media (max-width: 800px) {            
             width: 400px; 
             transition: none 0 !important;
             cursor: default;      
         }
+    }
+
+    & .box:first-child{
+        margin-top: 20px;
     }
 
     & .left.active{
@@ -217,13 +206,9 @@ section{
 
         @media (max-width:950px){
             transform: translateX(250px);
-        }
+        }      
 
-        @media (max-width:800px){
-            transform: translateX(200px);
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             transform: none !important;    
         }
         
@@ -240,13 +225,9 @@ section{
 
         @media (max-width:950px){
             transform: translateX(-250px);
-        }
+        }       
 
-        @media (max-width:800px){
-            transform: translateX(-200px);
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             transform: none !important;      
         }
     }
@@ -262,13 +243,9 @@ section{
 
         @media (max-width:950px){
             transform: translateX(-250px);
-        }
+        }       
 
-        @media (max-width:800px){
-            transform: translateX(-200px);
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             transform: none !important;     
         }
     }
@@ -284,19 +261,15 @@ section{
 
         @media (max-width:950px){
             transform: translateX(250px);
-        }
+        }        
 
-        @media (max-width:800px){
-            transform: translateX(200px);
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             transform: none !important;     
         }
     }
 
     & .blue{
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             transition: none !important;    
         }
     }
@@ -304,13 +277,9 @@ section{
     & .storage, & .users, & .send{
         @media (max-width:950px){
             font-size: .9rem;
-        }
+        }       
 
-        @media (max-width:800px){
-            font-size: .7rem;
-        }
-
-        @media (max-width: 650px) {
+        @media (max-width: 800px) {
             font-size: 1rem;   
         }
     }

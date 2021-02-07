@@ -70,20 +70,6 @@
   }
 }
 
-@media (max-width: 650px) {
-  .top .slider label {
-    width: 3rem;
-    height: 1.3rem;
-  }
-}
-
-@media (max-width: 650px) {
-  .top .slider .ball {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,9 +202,9 @@ section .blue .text {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   section {
-    height: 130vh;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -279,15 +265,6 @@ section .blue .text {
 
 @media (max-width: 800px) {
   section .price__year {
-    height: 50px;
-    font-size: 1rem;
-    -webkit-animation: none 0 !important;
-            animation: none 0 !important;
-  }
-}
-
-@media (max-width: 650px) {
-  section .price__year {
     height: 80px;
     font-size: 2.5rem;
     -webkit-animation: resize .5s linear !important;
@@ -344,15 +321,6 @@ section .blue .text {
 
 @media (max-width: 800px) {
   section .price__month {
-    height: 50px;
-    font-size: 1rem;
-    -webkit-animation: none 0 !important;
-            animation: none 0 !important;
-  }
-}
-
-@media (max-width: 650px) {
-  section .price__month {
     height: 80px;
     font-size: 2.5rem;
     -webkit-animation: resize .5s linear !important;
@@ -380,12 +348,6 @@ section .blue .text {
 
 @media (max-width: 800px) {
   section .box {
-    width: 200px;
-  }
-}
-
-@media (max-width: 650px) {
-  section .box {
     width: 400px;
     -webkit-transition: none 0 !important;
     transition: none 0 !important;
@@ -393,6 +355,10 @@ section .blue .text {
   }
 }
 
+section .box:first-child {
+  margin-top: 20px;
+}
+
 @media (max-width: 1270px) {
   section .left.active {
     -webkit-transform: translateX(350px);
@@ -415,13 +381,6 @@ section .blue .text {
 }
 
 @media (max-width: 800px) {
-  section .left.active {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-  }
-}
-
-@media (max-width: 650px) {
   section .left.active {
     -webkit-transform: none !important;
             transform: none !important;
@@ -451,13 +410,6 @@ section .blue .text {
 
 @media (max-width: 800px) {
   section .middle.active {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-  }
-}
-
-@media (max-width: 650px) {
-  section .middle.active {
     -webkit-transform: none !important;
             transform: none !important;
   }
@@ -485,13 +437,6 @@ section .blue .text {
 }
 
 @media (max-width: 800px) {
-  section .right.active2 {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-  }
-}
-
-@media (max-width: 650px) {
   section .right.active2 {
     -webkit-transform: none !important;
             transform: none !important;
@@ -521,19 +466,12 @@ section .blue .text {
 
 @media (max-width: 800px) {
   section .middle.active2 {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-  }
-}
-
-@media (max-width: 650px) {
-  section .middle.active2 {
     -webkit-transform: none !important;
             transform: none !important;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   section .blue {
     -webkit-transition: none !important;
     transition: none !important;
@@ -547,12 +485,6 @@ section .blue .text {
 }
 
 @media (max-width: 800px) {
-  section .storage, section .users, section .send {
-    font-size: .7rem;
-  }
-}
-
-@media (max-width: 650px) {
   section .storage, section .users, section .send {
     font-size: 1rem;
   }
@@ -574,7 +506,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -585,7 +517,7 @@ body {
 
 .container {
   width: 1440px;
-  height: 80vh;
+  height: 100%;
   background-color: #f6f6fe;
   margin: 0 auto;
   display: -webkit-box;
@@ -646,27 +578,21 @@ body {
           box-shadow: 0px 0px 0px 1px #b3b5c6 inset;
 }
 
-@media (max-width: 650px) {
-  body {
-    height: 100%;
-  }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .container {
-    height: 160vh;
+    height: auto;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .container::before {
     background: none;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .container::after {
     background: none;
   }
@@ -678,8 +604,8 @@ body {
   }
 }
 
-@media (max-width: 650px) {
-  .btn-left, .btn-right {
+@media (max-width: 800px) {
+  .btn-left, .btn-right, .btn-middle {
     all: unset;
     display: block;
     margin-top: 2rem;

@@ -59,20 +59,5 @@
             width: 1rem;
             height: 1rem;  
         }
-    }
-
-    & .slider label{
-        @media (max-width: 650px) {
-            width: 3rem;
-            height: 1.3rem   
-        }
-    }
-
-    & .slider .ball{
-        @media (max-width: 650px) {
-            width: 1rem;
-            height: 1rem;  
-        }
-    }
-    
+    }    
 }

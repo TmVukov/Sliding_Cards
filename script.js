@@ -1,7 +1,6 @@
 const switcher = document.querySelector("#switch")
 
 const boxContainer = document.querySelector("#boxes")
-
 const boxes = document.querySelectorAll(".box")
 
 const boxLeft = document.querySelector(".left")
@@ -13,7 +12,6 @@ const btnMid = document.querySelector(".btn-middle")
 
 
 //switch prices
-
 switcher.addEventListener("change", _=>{    
     document.querySelectorAll(".price__month").forEach(e=>e.classList.toggle("show"))
     document.querySelectorAll(".price__year").forEach(e=>e.classList.toggle("show"))    
@@ -22,7 +20,6 @@ switcher.addEventListener("change", _=>{
 
 
 //handle toggling
-
 function toggleElements(elemPosition){
 
     //click basic (or .left)
@@ -33,16 +30,12 @@ function toggleElements(elemPosition){
 
         if(boxLeft.classList.contains("blue")){
             removeBoxes(boxRight, boxMiddle, "active2", "blue")
-            removeBtns(btnRight, btnMid, "btn")           
+            removeBtns(btnRight, btnMid, "btn")                      
         }                                                     
     }   
 
     //click master (or .right)
-    if(elemPosition >= 800 || 
-        elemPosition >= 700 || 
-        elemPosition >= 600 || 
-        elemPosition >= 500 || 
-        elemPosition >= 400){
+    if(elemPosition > 401){
         toggleBox(boxRight, "active2", "blue")
         toggleBox(boxMiddle, "active2", "blue")             
         toggleBtns(btnRight, btnMid, "btn")        
@@ -54,25 +47,26 @@ function toggleElements(elemPosition){
     }   
 }
 
-boxContainer.addEventListener("click", e=>{ 
-    if(window.innerWidth > 650){
-        let containerX = boxContainer.getBoundingClientRect().x           
 
+boxContainer.addEventListener("click", e=>{ 
+    if(window.innerWidth > 800){
+        let containerX = boxContainer.getBoundingClientRect().x 
+        
         let target = e.target.closest(".box")        
+       
+        if(e.target.classList.contains("btn")) alert("Button says hellooo :)")             
         
         let targetX = target.getBoundingClientRect().x       
+    
+        let position = targetX - containerX      
         
-        let position = targetX - containerX        
-        
-        toggleElements((Math.ceil(position)))
+        toggleElements((Math.ceil(position)))             
     }    
 })
 
 
 
-
 //reusable functions 
-
 function toggleBox(elem, class1, class2){
     elem.classList.toggle(class1)
     elem.classList.toggle(class2)
